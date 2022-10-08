@@ -9,7 +9,7 @@ const initialStateSearch = {
   searchField: ''
 } 
 
-export const searchRobots = (state=initialStateSearch, action={}) => {
+export const searchRobots = (state= initialStateSearch, action={}) => {
   switch (action.type) {
     case CHANGE_SEARCHFIELD:
       return Object.assign({}, state, {searchField: action.payload})
@@ -20,7 +20,7 @@ export const searchRobots = (state=initialStateSearch, action={}) => {
 
 const initialStateRobots = {
   robots: [],
-  isPending: true
+  isPending: false
 }
 
 export const requestRobots = (state=initialStateRobots, action={}) => {
